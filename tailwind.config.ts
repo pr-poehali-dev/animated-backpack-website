@@ -25,12 +25,20 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#FF6B35',
+					DEFAULT: '#FF3333',
 					foreground: '#000000'
 				},
 				secondary: {
 					DEFAULT: '#000000',
 					foreground: '#FFFFFF'
+				},
+				brutal: {
+					DEFAULT: '#FF0000',
+					orange: '#FF6600',
+					yellow: '#FFFF00',
+					green: '#00FF00',
+					blue: '#0099FF',
+					purple: '#9900FF'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -98,8 +106,27 @@ export default {
 					to: { transform: 'translateY(0)', opacity: '1' }
 				},
 				'pulse-glow': {
-					'0%, 100%': { boxShadow: '0 0 5px #FF6B35' },
-					'50%': { boxShadow: '0 0 20px #FF6B35, 0 0 30px #FF6B35' }
+					'0%, 100%': { boxShadow: '0 0 5px #FF3333' },
+					'50%': { boxShadow: '0 0 20px #FF3333, 0 0 30px #FF3333' }
+				},
+				'brutal-spin': {
+					'0%': { transform: 'rotate(0deg) scale(1)' },
+					'50%': { transform: 'rotate(180deg) scale(1.2)' },
+					'100%': { transform: 'rotate(360deg) scale(1)' }
+				},
+				'chaos-move': {
+					'0%': { transform: 'translate(0, 0) rotate(0deg)' },
+					'25%': { transform: 'translate(20px, -30px) rotate(90deg)' },
+					'50%': { transform: 'translate(-10px, 20px) rotate(180deg)' },
+					'75%': { transform: 'translate(-20px, -10px) rotate(270deg)' },
+					'100%': { transform: 'translate(0, 0) rotate(360deg)' }
+				},
+				'glitch': {
+					'0%, 100%': { transform: 'translate(0)' },
+					'20%': { transform: 'translate(-2px, 2px)' },
+					'40%': { transform: 'translate(-2px, -2px)' },
+					'60%': { transform: 'translate(2px, 2px)' },
+					'80%': { transform: 'translate(2px, -2px)' }
 				},
 				'bg-scale': {
 					'0%': { transform: 'scale(1)' },
@@ -122,7 +149,10 @@ export default {
 				'slide-up': 'slide-up 0.6s ease-out',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 				'bg-scale': 'bg-scale 20s ease-in-out infinite',
-				'morph': 'morph 8s ease-in-out infinite'
+				'morph': 'morph 8s ease-in-out infinite',
+				'brutal-spin': 'brutal-spin 4s linear infinite',
+				'chaos-move': 'chaos-move 6s ease-in-out infinite',
+				'glitch': 'glitch 0.3s ease-in-out infinite'
 			}
 		}
 	},
